@@ -1,0 +1,53 @@
+[package]
+name = "algorithm_arhive"
+version = "0.1.0"
+authors = ["komm <k.a.komissar@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[[bin]]
+name = "bubble_sort"
+path = "./src/bubble_sort.rs"
+
+[[bin]]
+name = "tree_traversal"
+path = "./src/tree_traversal.rs"
+
+[[bin]]
+name = "euclidean_algorithm"
+path = "./src/euclidean_algorithm.rs"
+
+[[bin]]
+name = "monte_carlo"
+path = "./src/monte_carlo.rs"
+
+[[bin]]
+name= "gaussian_elimination"
+path = "./src/gaussian_elimination.rs"
+
+[[bin]]
+name = "thomas_algorithm"
+path = "./src/thomas_algorithm.rs"
+
+[[bin]]
+name = "convex_hull"
+path = "./src/convex_hull.rs"
+
+[[bin]]
+name = "graham_scan"
+path = "./src/graham_scan.rs"
+
+[[bin]]
+name = "fft"
+path = "./src/fft.rs"
+
+[[bin]]
+name = "stable_mariage_problem"
+path = "./src/stable_mariage_problem.rs"
+
+[dependencies]
+rand = "0.7.0"
+num-complex = "0.2.0"
+num = "0.2.0"
+num-traits = "*"
