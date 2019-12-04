@@ -12,7 +12,7 @@ use num_complex::Complex;
 
 use std::f64::consts::PI;
 
-fn dft(array: &[f64]) -> Vec<Complex<f64>> {
+fn _dft(array: &[f64]) -> Vec<Complex<f64>> {
     let size = array.len();
     let fsize = size as f64;
     let mut res = (0..size).map(|_x| Complex::from(0.)).collect::<Vec<_>>();
@@ -96,7 +96,7 @@ fn iter_cooley_turkey(tmp: &[f64]) -> Vec<Complex<f64>> {
     }
 
     let size = array.len();
-    let fsize = size as f64;
+    let _fsize = size as f64;
     sort_by_bit_reverse(&mut array);
 
     let mut stride = 2;
@@ -107,7 +107,9 @@ fn iter_cooley_turkey(tmp: &[f64]) -> Vec<Complex<f64>> {
             let mut v = Complex::from(1.);
             for k in 0..stride / 2 {
                 array[k + j + stride / 2] = array[k + j] - v * array[k + j + stride / 2];
-                array[k + j] -= array[k + j + stride / 2] - array[k + j];
+                let offset = array[k + j + stride / 2];
+                let base = array[k + j];
+                array[k + j] -= offset - base;
                 v *= w;
             }
         }
@@ -151,7 +153,6 @@ fn main() {
     // println!("{:?}", dft2(&[6., 7.]));
 }
 
-fn send<T: num::Num>(some: &[T]) -> &T {
+fn _send<T: num::Num>(some: &[T]) -> &T {
     &some[0]
 }
-
