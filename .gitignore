@@ -1,4 +1,2 @@
 /target
-/.vim
-/.metals
 **/*.rs.bk
