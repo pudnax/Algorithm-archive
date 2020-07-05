@@ -20,7 +20,7 @@ impl From<&[i64; 2]> for Point {
 }
 
 fn ccw(a: Point, b: Point, c: Point) -> f64 {
-    (b.x - a.x) * (c.y - a.y) - (b.y - a.y) * (c.x - a.x)
+    ((b.x - a.x) * (c.y - a.y) - (b.y - a.y) * (c.x - a.x))
 }
 
 fn graham_scan(points: &mut Vec<Point>) -> Vec<Point> {
