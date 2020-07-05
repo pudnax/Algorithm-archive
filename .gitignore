@@ -1,4 +1,5 @@
 /target
 /.vim
 /.metals
+./src/huffman_encoding
 **/*.rs.bk
