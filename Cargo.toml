@@ -7,6 +7,10 @@ edition = "2018"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [[bin]]
+name = "huffman"
+path = "./src/huffman_encoding.rs"
+
+[[bin]]
 name = "bubble_sort"
 path = "./src/bubble_sort.rs"
 
@@ -51,3 +55,4 @@ rand = "0.7.0"
 num-complex = "0.2.0"
 num = "0.2.0"
 num-traits = "*"
+itertools = "0.9.0"
